@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <!--Recomendable poner para definir como se ajustara la página web
+          y con esto se establece que se mostrara en la escala inicial sin Zoom-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAIN PAGE</title>
+  <!--Estilo en cascada externo-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="content-container">
+    <section>
+      <div class="header-container">
+        <div class="nav-img-container">
+          <nav class="nav-container">
+            <ul class="nav-ulist">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#Nosotros">Nosotros</a></li>
+              <li><a href="#Servicios">Servicios</a></li>
+              <li><a href="#Generador">Generador</a></li>
+              <li><a href="#Contactanos">Contáctanos</a></li>
+            </ul>
+          </nav>
+          <img src="./image/pexels-matej-716661.jpg" alt="Imagen de fondo" />
+        </div>
+      </div>
+      <img src="./image/welcome.png" alt="Imagen de fondo" />
+    </section>
+  </header>
+
+  <main>
+    <section id="Nosotros">
+      <h1>CONOCE A NUESTRO EQUIPO DE ILUSTRADORES</h1>
+      <div class="box-container">
+        <div class="box-items">
+          <img src="./image/pexels-hannah-nelson-1085517.jpg" alt="i1" />
+          <h3>Hanna Roz</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="box-items">
+          <img src="./image/pexels-key-notez-1334945.jpg" alt="i1" />
+          <h3>Rodrigo Hernández</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="box-items">
+          <img src="./image/pexels-kelly-3030332.jpg" alt="i1" />
+          <h3>Kell Anderson</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+      <img src="./image/partners.png" alt="i1" />
+    </section>
+
+    <section id="Servicios">
+      <h1>NUESTROS SERVICIOS</h1>
+      <div id="Servicios" class="box-container">
+        <div class="box-items-services">
+          <img src="./image/art-book.png" alt="i1" />
+          <h3>Ilustraciones para libros</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="box-items-services">
+          <img src="./image/drawing.png" alt="i1" />
+          <h3>Animación de personajes</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="box-items-services">
+          <img src="./image/social-media.png" alt="i1" />
+          <h3>Ilustraciones publicitarias</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+      <img src="./image/24-hours.png" alt="i1" />
+    </section>
+
+    <section id="Generador">
+      <h1>Generador de Tarjetas de Crédito</h1>
+      <h1>Información del Pago</h1>
+      <div class="generator-container">
+        
+        <div class="main-card-container">
+          <div class="ui">
+            <div class="container-left">
+              <form id="credit-card">
+                <div class="number-container">
+                    <label> Card Number</label>
+                    <!--Limitamos la cantidad de numeros que contendra
+                    el campo de numero de tarjeta asignando onkeypress-->
+                    <input type="text" name="card-number" 
+                    id="card-number" maxLength="19" 
+                    placeholder="1234 5678 9101 1121"
+                     onkeypress ="return event.charCode >= 48 && event.charCode <= 57">
+                </div>
+                <div class="name-container">
+                  <label> Holder</label>
+                  <input type="text" name="name-text" 
+                  id="name-text" maxlength="30"
+                  placeholder="Jorge Mendez" pattern="^[a-z|A-Z| ]$" title="Se requiere solo letras minúsculas o mayúsculas. Ejemplo: Jairo Orantes"/>
+                </div>
+                <div class="info-container">
+                    <div class="expiration-container">
+                      <label> Valid-thru</label>
+                      <input type="text" name="valid-thru-text" 
+                      id="valid-thru-text" maxLength="5" 
+                      placeholder="02/40"
+                      onkeypress ="return event.charCode >= 48 && event.charCode <= 57">    
+                    </div>
+                    <div class="cvv-container">
+                      <label>CVV</label>
+                      <input type="text" name="cvv-text" 
+                      id="cvv-text" maxLength="4" 
+                      placeholder="1234"
+                      onkeypress ="return event.charCode >= 48 && event.charCode <= 57">    
+                    </div>
+                </div>
+                <input type="submit" value="Generate" id="generate">
+              </form>
+            </div>
+            <div class="container-right">
+              <div class="card">
+                <div class="intern">
+
+                    <div class="card-number">
+                      <div class="number-v1">1234 5678 9101 1121</div>
+                    </div>
+
+                    <div class="card-info">
+                      <div class="exp">
+                        <label>valid-thru</label>
+                        <div class="expiration-v1">02/40</div>
+                      </div>
+                    </div>
+                    <div class="card-holder">
+                      <div class="name-v1">Jorge Mendez</div>
+                    </div>
+                    <img id="cardType" class="chip" src="image/american-express.png" alt="chip">
+                </div>
+                <div class="back">
+                  <div class="black-bar">
+                  </div>
+                  <div class="stripe">
+                    <div class="card-name">
+                      <div class="holder">Jorge Mendez</div>
+                    </div>
+                  </div>
+                  <div class="cvv-container">
+                    <div class="cvv-v2">123</div>
+                    <div class="security-code">Security Code</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contactanos">
+      <h1>CONTÁCTANOS</h1>
+      <div class="contact-container">
+        <img src="./image/R.png" alt="mapa">
+        <p>456 Park Avenue, Suite 789, New York,
+          NY, 10022, Estados Unidos.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+
+  <footer class="footer">
+    <p">Todos los derechos reservados ®
+      <br> Jorge Mendez </p>
+  </footer>
+</body>
+
+</html>

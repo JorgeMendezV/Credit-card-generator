@@ -1,0 +1,458 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+/*  GLOBAL  */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+main h1 {
+  text-align: center;
+  letter-spacing: 5px !important;
+}
+
+section img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 140px;
+}
+
+@media (max-width: 60em) {
+  main h1 {
+    font-size: 20px;
+  }
+}
+
+#Nosotros,
+#Servicios,
+#Contactanos {
+  padding-top: 40px;
+}
+
+
+/*NAV CONTAINER - MENU*/
+
+.content-container {
+  /*Con este margin top desplazo el contenido debajo de la imagen.*/
+  margin-top: 40%;
+}
+
+.nav-container {
+  /*Con este fixed se mantendrá 
+  fija en la parte superior aunque se desplace la página.*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(32, 31, 31, 0.5);
+  z-index: 1;
+}
+
+.nav-ulist {
+  /*Cada ul o item quedará junto al otro.*/
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+/*Estilizar los vínculos.*/
+.nav-ulist li a {
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  padding: 12px;
+}
+
+/*Cuando pase sobre un vínculo se sombreara.*/
+.nav-ulist li a:hover {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+
+/*Contenedor principal.
+Hará que la imagen quede por debajo del nav.*/
+.nav-img-container {
+  /*No es necesario ponerlo, ya que en el nav tiene z-index:1; 
+  con eso queda por encima de la imagen.*/
+  z-index: 0;
+}
+
+.nav-img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+}
+
+/*Utilizo {em} porque es una medida relativa
+se ajustará mejor a los tamaños de la fuente actual.
+Es útil para responsive.*/
+
+@media (max-width: 60em) {
+  .content-container {
+    margin-top: 78%;
+  }
+
+  .nav-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+
+/* ITEMS ABOUT US*/
+
+.box-container {
+  display: flex;
+}
+
+.box-items {
+  border: 100px black;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+
+/*Para las fotos del personal se agregó que sea redondeado con border-radius.*/
+.box-items img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.box-items-services {
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+
+.box-items-services img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+
+
+/*CONTENEDOR GENERADOR*/
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 1% auto;
+}
+
+/*Diseño principal de contenedor*/
+.ui {
+  border: 0;
+  box-shadow: 0 0 10px 0 rgba(46, 46, 46, 0.5);
+  border-radius: 10px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 6%;
+  display: flex;
+  gap: 20px;
+  background-color: black;
+}
+
+.container-left {
+  width: 50%;
+}
+
+/*Manejar una parte del responsive*/
+@media (max-width:1024px) {
+
+  .ui {
+    flex-direction: column-reverse;
+
+  }
+
+  .container-left {
+    width: 100%;
+  }
+}
+
+/*Contenedor de tarjeta de credito*/
+.container-right {
+  width: 345px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/*-----CARD-----*/
+/*CARD FORMS STYLE*/
+.intern {
+  padding: 10px;
+}
+
+.chip {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 25%;
+  bottom: 10px;
+}
+
+.number-container,
+.name-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.expiration-container,
+.cvv-container {
+  width: 50%;
+  color:white;
+}
+
+/*Estilos de input de formulario*/
+input {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: rgb(34, 34, 34);
+  font-size: 1.1rem;
+  outline: 0;
+  width: 90%;
+}
+
+/*Bordo y tamaño para campos de formularios*/
+input[type="text"]:focus {
+  border: 1px solid rgb(43, 43, 43);
+}
+
+input#valid-thru-text,
+input#cvv-text {
+  width: 80%;
+}
+
+input[type="submit"] {
+  width: 95%;
+  background-color: azure;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.info-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+/*CARD STYLE AND POSITIONS*/
+/*Contenido de la parte frontal*/
+.card {
+  width: 360px;
+  height: 215px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in;
+  margin-bottom: 20px;
+  /*Utilizamos una imagen para el diseño de la tarjeta*/
+  background-image: url(../image/cardFront.png);
+  background-size: auto;
+  background-position: center;
+  border-radius: 20px;
+  z-index: 0;
+  backface-visibility: hidden;
+}
+
+.card-number {
+  margin-top: 125px;
+  color: rgb(149, 149, 149);
+  display: flex;
+}
+
+.card-info {
+  display: flex;
+  color: rgb(149, 149, 149);
+}
+
+.card .intern,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  backface-visibility: hidden;
+}
+
+
+/* Define el estilo de los elementos internos de la clase .card */
+.card .intern {
+  color: rgb(149, 149, 149);
+  display: flex;
+  flex-direction: column;
+  border-radius: 80px;
+  z-index: 2;
+}
+
+
+/* Define el estilo de la clase .card-info que está dentro de .intern */
+.card .intern .card-info {
+  width: 100%;
+  margin-top: 2px;
+}
+
+/* Define el estilo de los elementos con la clase .exp y .card-holder que están dentro de .card-info */
+.card .intern .card-info .exp,
+.card .intern .card-info .card-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Define el estilo de los elementos con la etiqueta <label> que están dentro de .exp y .card-info */
+.card .intern .card-info .exp label,
+.card .intern .card-info label {
+  font-size: 7px;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+/* Define el estilo de los elementos con la clase .name-v1 y .expiration-v1 que están dentro de .exp y .card-info */
+.card .intern .card-info .exp .name-v1,
+.card .intern .card-info .name-v1 .expiration-v1 {
+  font-size: 10px;
+  margin-top: -6px;
+}
+
+.exp .expiration-v1{
+  margin-top: -8px;
+}
+
+/*Hace que el logo de la tarjeta de crédito se mueve hacia la esquina inferior derecha.*/
+.card .intern .chip {
+  position: absolute;
+  left: 65%;
+  transform: translate(50%, 5%);
+}
+
+/* Esta clase se aplica cuando la tarjeta está volteada */
+.card.flipped {
+  transform: rotateY(180deg);
+  }
+  
+  /* Estilos para el lado trasero de la tarjeta */
+  .card .back {
+  position: relative;
+  width: 315px;
+  padding: 11px;
+  color: white;
+  background-color: #8d8d8d;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background-image: url('../image/bg-card-back.jpg');
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.4s ease-out;
+  }
+  
+  /* Estilos adicionales que se aplican cuando la tarjeta está volteada */
+  .card.flipped .back {
+  opacity: 1;
+  }
+  
+  /* Estilos para el nombre del titular de la tarjeta */
+  .card .back .card-name {
+  text-transform: uppercase;
+  margin-top: 75px;
+  margin-right: 70px;
+  color: rgb(255, 255, 255);
+  font-family: 'Great Vibes', cursive;
+  }
+  
+  /* Estilos para el nombre del titular de la tarjeta */
+  .card .back .holder {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 40px;
+  }
+  
+  /* Estilos para el contenedor del código de seguridad */
+  .card .back .cvv-container {
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 265px;
+  }
+  
+  /* Estilos para el mensaje "Código de seguridad" */
+  .cvv-container .security-code{
+  margin-top: 10px;
+  font-size: 8px;
+  margin-left: -15px;
+  }
+  
+  /* Estilos para el número del código de seguridad */
+  .cvv-container .cvv-v2{
+  margin-top: -35px;
+  }
+
+
+
+
+
+/*CONTACT US CONTAINER*/
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20%;
+  margin-bottom: 20px;
+  margin-left: 16%;
+}
+
+.contact-container img {
+  width: 70%;
+  margin-right: 20px;
+}
+
+@media (max-width: 60em) {
+  .contact-container img {
+    width: 80%;
+    margin-right: 10px;
+  }
+
+  .contact-container {
+    margin-right: 5%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*FOOTER CONTAINER*/
+.footer {
+  background-color: #000000;
+  padding: 3em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 15px;
+}
